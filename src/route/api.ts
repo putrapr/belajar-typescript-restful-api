@@ -15,3 +15,4 @@ apiRouter.delete('/api/users/current', User.logout)
 // Contact API
 apiRouter.post('/api/contacts', Contact.create)
 apiRouter.get('/api/contacts/:contactId(\\d+)', Contact.get)
+apiRouter.put('/api/contacts/:contactId(\\d+)', Contact.update)
