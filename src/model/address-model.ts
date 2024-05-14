@@ -34,7 +34,7 @@ export type GetAddressRequest = {
   id: number
 }
 
-// export type RemoveAddressRequest = GetAddressRequest
+export type RemoveAddressRequest = GetAddressRequest
 
 export function toAddressResponse(address: Address): AddressResponse {
   return {
