@@ -22,3 +22,4 @@ apiRouter.get('/api/contacts', Contact.search)
 // Address API
 apiRouter.post('/api/contacts/:contactId(\\d+)/addresses', Address.create)
 apiRouter.get('/api/contacts/:contactId(\\d+)/addresses/:addressId(\\d+)', Address.get)
+apiRouter.put('/api/contacts/:contactId(\\d+)/addresses/:addressId(\\d+)', Address.update)
