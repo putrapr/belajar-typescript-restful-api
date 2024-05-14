@@ -1,4 +1,5 @@
 import { Address } from '@prisma/client'
+import { number } from 'zod'
 
 export type AddressResponse = {
   id: number
@@ -16,6 +17,11 @@ export type CreateAddressRequest = {
   province?: string
   country: string
   postal_code: string
+}
+
+export type GetAddressRequest = {
+  contact_id: number
+  id: number
 }
 
 export function toAddressResponse(address: Address): AddressResponse {

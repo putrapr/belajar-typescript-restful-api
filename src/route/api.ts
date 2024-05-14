@@ -2,7 +2,7 @@ import express from 'express'
 import { authMiddleware } from '../middleware/auth-middleware'
 import { UserController as User } from '../controller/user-controller'
 import { ContactController as Contact } from '../controller/contact-controller'
-import { AddressController as Address } from '../controller/address-controller'
+import { AddressController as Address, AddressController } from '../controller/address-controller'
 
 export const apiRouter = express.Router()
 apiRouter.use(authMiddleware)
@@ -21,3 +21,4 @@ apiRouter.get('/api/contacts', Contact.search)
 
 // Address API
 apiRouter.post('/api/contacts/:contactId(\\d+)/addresses', Address.create)
+apiRouter.get('/api/contacts/:contactId(\\d+)/addresses/:addressId(\\d+)', Address.get)
